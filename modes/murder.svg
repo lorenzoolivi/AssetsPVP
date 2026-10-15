@@ -1,0 +1,67 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 900" width="1600" height="900">
+  <!-- Murder Mystery: sagome nella nebbia, una sola ha il coltello. -->
+  <defs>
+    <radialGradient id="muFondo" cx="50%" cy="35%" r="80%">
+      <stop offset="0%" stop-color="#17202b"/>
+      <stop offset="60%" stop-color="#0a0d12"/>
+      <stop offset="100%" stop-color="#04060a"/>
+    </radialGradient>
+    <linearGradient id="muNebbia" x1="0" y1="1" x2="0" y2="0">
+      <stop offset="0%" stop-color="#0a0d12"/>
+      <stop offset="100%" stop-color="#0a0d12" stop-opacity="0"/>
+    </linearGradient>
+    <filter id="muGlow" x="-40%" y="-40%" width="180%" height="180%">
+      <feGaussianBlur stdDeviation="16" result="b"/>
+      <feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+    <radialGradient id="muVign" cx="50%" cy="45%" r="68%">
+      <stop offset="52%" stop-color="#000" stop-opacity="0"/>
+      <stop offset="100%" stop-color="#000" stop-opacity=".75"/>
+    </radialGradient>
+  </defs>
+
+  <rect width="1600" height="900" fill="url(#muFondo)"/>
+
+  <!-- fascio di luce -->
+  <path d="M760 0 L1180 900 H340z" fill="#FFC933" opacity=".07"/>
+
+  <!-- sagome innocenti -->
+  <g fill="#0f151d" opacity=".92">
+    <g transform="translate(320 470)">
+      <circle cy="-90" r="62"/><path d="M-88 0 q88 -50 176 0 v290 h-176z"/>
+    </g>
+    <g transform="translate(1290 500)">
+      <circle cy="-90" r="58"/><path d="M-82 0 q82 -48 164 0 v270 h-164z"/>
+    </g>
+    <g transform="translate(1060 460)" opacity=".8">
+      <circle cy="-86" r="54"/><path d="M-78 0 q78 -46 156 0 v260 h-156z"/>
+    </g>
+  </g>
+
+  <!-- l'assassino, in evidenza -->
+  <g transform="translate(700 440)" filter="url(#muGlow)">
+    <g fill="#050709" stroke="#FFC933" stroke-width="6">
+      <circle cy="-104" r="72"/>
+      <path d="M-104 0 q104 -58 208 0 v330 h-208z"/>
+    </g>
+    <!-- coltello -->
+    <g transform="translate(150 120) rotate(28)" fill="#eafff2">
+      <path d="M0 0 l30 -14 v-150 l-30 40z"/>
+      <rect x="-6" y="-2" width="42" height="20" rx="6" fill="#FFC933"/>
+    </g>
+    <!-- occhi -->
+    <g fill="#FFC933">
+      <circle cx="-26" cy="-112" r="10"/><circle cx="26" cy="-112" r="10"/>
+    </g>
+  </g>
+
+  <!-- punti interrogativi -->
+  <g fill="#FFC933" opacity=".28" font-family="Inter, Arial, sans-serif" font-size="150" font-weight="700">
+    <text x="180" y="220">?</text>
+    <text x="1420" y="300">?</text>
+    <text x="980" y="180" opacity=".6">?</text>
+  </g>
+
+  <rect y="560" width="1600" height="340" fill="url(#muNebbia)"/>
+  <rect width="1600" height="900" fill="url(#muVign)"/>
+</svg>

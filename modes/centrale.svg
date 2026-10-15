@@ -1,0 +1,84 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 280" width="600" height="280">
+  <!-- Assalto centrale LSPD: facciata con colonne, volanti di traverso, fumo -->
+  <defs>
+    <linearGradient id="cen-cielo" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#1c1416"/>
+      <stop offset=".6" stop-color="#0b0d10"/>
+      <stop offset="1" stop-color="#050607"/>
+    </linearGradient>
+    <radialGradient id="cen-fuoco" cx="0.5" cy="1" r="1">
+      <stop offset="0" stop-color="#ff8a3c" stop-opacity=".55"/>
+      <stop offset="1" stop-color="#ff8a3c" stop-opacity="0"/>
+    </radialGradient>
+    <radialGradient id="cen-rosso" cx="0.5" cy="0.5" r="0.5">
+      <stop offset="0" stop-color="#ff4d4d" stop-opacity=".85"/>
+      <stop offset="1" stop-color="#ff4d4d" stop-opacity="0"/>
+    </radialGradient>
+    <radialGradient id="cen-blu" cx="0.5" cy="0.5" r="0.5">
+      <stop offset="0" stop-color="#4da6ff" stop-opacity=".85"/>
+      <stop offset="1" stop-color="#4da6ff" stop-opacity="0"/>
+    </radialGradient>
+    <linearGradient id="cen-basso" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#000" stop-opacity="0"/>
+      <stop offset="1" stop-color="#000" stop-opacity=".85"/>
+    </linearGradient>
+  </defs>
+
+  <rect width="600" height="280" fill="url(#cen-cielo)"/>
+
+  <!-- bagliore d'incendio dietro l'edificio -->
+  <ellipse cx="300" cy="200" rx="280" ry="120" fill="url(#cen-fuoco)"/>
+
+  <!-- edificio: corpo -->
+  <rect x="120" y="52" width="360" height="158" fill="#0c1013"/>
+  <!-- timpano -->
+  <path d="M112 62 L300 18 L488 62 Z" fill="#0f1418"/>
+  <path d="M112 62h376v10H112z" fill="#141a1f"/>
+
+  <!-- colonne -->
+  <g fill="#161d22">
+    <rect x="150" y="72" width="22" height="138"/>
+    <rect x="202" y="72" width="22" height="138"/>
+    <rect x="254" y="72" width="22" height="138"/>
+    <rect x="324" y="72" width="22" height="138"/>
+    <rect x="376" y="72" width="22" height="138"/>
+    <rect x="428" y="72" width="22" height="138"/>
+  </g>
+  <!-- ingresso illuminato -->
+  <rect x="282" y="120" width="36" height="90" fill="#00ac47" opacity=".22"/>
+  <rect x="282" y="120" width="36" height="90" fill="none" stroke="#00ac47" stroke-opacity=".55" stroke-width="2"/>
+
+  <!-- scalinata -->
+  <g fill="#0a0e10">
+    <rect x="104" y="210" width="392" height="10"/>
+    <rect x="88" y="220" width="424" height="10"/>
+    <rect x="72" y="230" width="456" height="10"/>
+  </g>
+
+  <!-- strada -->
+  <rect y="240" width="600" height="40" fill="#080a0b"/>
+  <rect y="240" width="600" height="3" fill="#00ac47" opacity=".3"/>
+
+  <!-- volanti di traverso -->
+  <circle cx="98" cy="222" r="42" fill="url(#cen-rosso)"/>
+  <circle cx="508" cy="222" r="42" fill="url(#cen-blu)"/>
+  <g fill="#0a0d0f">
+    <path d="M40 244v-26h96v26z"/>
+    <path d="M62 218v-16h48l12 16z"/>
+    <path d="M466 244v-26h96v26z"/>
+    <path d="M488 218v-16h48l12 16z"/>
+  </g>
+  <g fill="#00ac47" opacity=".5">
+    <rect x="82" y="196" width="14" height="6"/>
+    <rect x="508" y="196" width="14" height="6"/>
+  </g>
+
+  <!-- sagome che avanzano sulla scalinata -->
+  <g fill="#000">
+    <circle cx="230" cy="212" r="8"/><path d="M221 222h18l7 22h-32z"/>
+    <circle cx="372" cy="216" r="8"/><path d="M363 226h18l7 18h-32z"/>
+    <circle cx="300" cy="224" r="9"/><path d="M290 234h20l8 16h-36z"/>
+  </g>
+
+  <rect y="180" width="600" height="100" fill="url(#cen-basso)"/>
+</svg>

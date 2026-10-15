@@ -1,0 +1,73 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 280" width="600" height="280">
+  <!-- Blindato sequestri LSPD: furgone blindato di notte in citta', lampeggianti dietro -->
+  <defs>
+    <linearGradient id="bli-cielo" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#0b1a26"/>
+      <stop offset="1" stop-color="#050708"/>
+    </linearGradient>
+    <linearGradient id="bli-mezzo" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#2a3138"/>
+      <stop offset="1" stop-color="#0e1214"/>
+    </linearGradient>
+    <radialGradient id="bli-rosso" cx="0.5" cy="0.5" r="0.5">
+      <stop offset="0" stop-color="#ff4d4d" stop-opacity=".8"/>
+      <stop offset="1" stop-color="#ff4d4d" stop-opacity="0"/>
+    </radialGradient>
+    <radialGradient id="bli-blu" cx="0.5" cy="0.5" r="0.5">
+      <stop offset="0" stop-color="#4da6ff" stop-opacity=".8"/>
+      <stop offset="1" stop-color="#4da6ff" stop-opacity="0"/>
+    </radialGradient>
+    <linearGradient id="bli-fari" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#fff2c9" stop-opacity=".55"/>
+      <stop offset="1" stop-color="#fff2c9" stop-opacity="0"/>
+    </linearGradient>
+    <linearGradient id="bli-basso" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#000" stop-opacity="0"/>
+      <stop offset="1" stop-color="#000" stop-opacity=".85"/>
+    </linearGradient>
+  </defs>
+
+  <rect width="600" height="280" fill="url(#bli-cielo)"/>
+
+  <!-- skyline -->
+  <g fill="#0a1219">
+    <path d="M0 120h48v90H0zM60 92h40v118H60zM112 140h34v70h-34zM158 74h52v136h-52zM222 128h30v82h-30z"/>
+    <path d="M420 100h44v110h-44zM474 132h36v78h-36zM520 84h48v126h-48z"/>
+  </g>
+  <g fill="#7fe0a8" opacity=".35">
+    <rect x="68" y="104" width="6" height="8"/><rect x="82" y="122" width="6" height="8"/>
+    <rect x="168" y="88" width="6" height="8"/><rect x="188" y="112" width="6" height="8"/>
+    <rect x="176" y="140" width="6" height="8"/>
+    <rect x="430" y="114" width="6" height="8"/><rect x="448" y="142" width="6" height="8"/>
+    <rect x="532" y="98" width="6" height="8"/><rect x="550" y="126" width="6" height="8"/>
+  </g>
+
+  <!-- strada -->
+  <rect y="204" width="600" height="76" fill="#0a0d0f"/>
+  <g stroke="#00ac47" stroke-opacity=".45" stroke-width="4" stroke-dasharray="34 26">
+    <path d="M0 250h600"/>
+  </g>
+
+  <!-- lampeggianti della scorta dietro -->
+  <circle cx="120" cy="176" r="46" fill="url(#bli-rosso)"/>
+  <circle cx="196" cy="176" r="46" fill="url(#bli-blu)"/>
+
+  <!-- fascio dei fari -->
+  <path d="M470 190 L600 150 L600 232 L470 210 Z" fill="url(#bli-fari)"/>
+
+  <!-- blindato -->
+  <g>
+    <path d="M250 210v-78h136v78z" fill="url(#bli-mezzo)"/>
+    <path d="M386 210v-56h44l30 30v26z" fill="url(#bli-mezzo)"/>
+    <path d="M398 168h26l20 20h-46z" fill="#0b1013"/>
+    <path d="M262 146h50v34h-50z" fill="#0b1013"/>
+    <path d="M262 146h50v34h-50z" fill="none" stroke="#00ac47" stroke-opacity=".5" stroke-width="2"/>
+    <path d="M324 142h54v10h-54z" fill="#00ac47" opacity=".25"/>
+    <circle cx="452" cy="196" r="10" fill="#b0e9c9" opacity=".9"/>
+    <circle cx="294" cy="212" r="20" fill="#05080a"/><circle cx="294" cy="212" r="8" fill="#1b2226"/>
+    <circle cx="418" cy="212" r="20" fill="#05080a"/><circle cx="418" cy="212" r="8" fill="#1b2226"/>
+    <path d="M250 132h136v6h-136z" fill="#00ac47" opacity=".55"/>
+  </g>
+
+  <rect y="180" width="600" height="100" fill="url(#bli-basso)"/>
+</svg>

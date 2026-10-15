@@ -1,0 +1,71 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 280" width="600" height="280">
+  <!-- Convoglio di armi: due camion scortati sulla statale della contea, al crepuscolo -->
+  <defs>
+    <linearGradient id="con-cielo" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#1a2418"/>
+      <stop offset=".55" stop-color="#0c130f"/>
+      <stop offset="1" stop-color="#050706"/>
+    </linearGradient>
+    <linearGradient id="con-cassa" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#333c33"/>
+      <stop offset="1" stop-color="#12170f"/>
+    </linearGradient>
+    <linearGradient id="con-fari" x1="1" y1="0" x2="0" y2="0">
+      <stop offset="0" stop-color="#fff0c0" stop-opacity=".5"/>
+      <stop offset="1" stop-color="#fff0c0" stop-opacity="0"/>
+    </linearGradient>
+    <linearGradient id="con-basso" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#000" stop-opacity="0"/>
+      <stop offset="1" stop-color="#000" stop-opacity=".85"/>
+    </linearGradient>
+  </defs>
+
+  <rect width="600" height="280" fill="url(#con-cielo)"/>
+
+  <!-- colline -->
+  <path d="M0 150 L90 108 L170 142 L250 100 L340 148 L430 116 L520 152 L600 124 L600 210 L0 210 Z" fill="#0b120d"/>
+  <path d="M0 168 L120 140 L230 172 L360 138 L470 174 L600 148 L600 214 L0 214 Z" fill="#070c09"/>
+
+  <!-- pali della luce -->
+  <g stroke="#0f1a12" stroke-width="4">
+    <path d="M76 168v-58M76 116h22M498 172v-52M498 126h-22"/>
+  </g>
+
+  <!-- asfalto -->
+  <rect y="208" width="600" height="72" fill="#0a0c0b"/>
+  <path d="M0 208h600" stroke="#00ac47" stroke-opacity=".3" stroke-width="3"/>
+  <g stroke="#00ac47" stroke-opacity=".4" stroke-width="4" stroke-dasharray="30 28">
+    <path d="M0 254h600"/>
+  </g>
+
+  <!-- fascio dei fari del primo camion, verso sinistra -->
+  <path d="M212 196 L60 158 L60 236 L212 214 Z" fill="url(#con-fari)"/>
+
+  <!-- camion 1 (in testa) -->
+  <g>
+    <path d="M212 212v-64h118v64z" fill="url(#con-cassa)"/>
+    <path d="M212 148h118v8h-118z" fill="#00ac47" opacity=".5"/>
+    <path d="M186 212v-42h30l14 18v24z" fill="#1d241c"/>
+    <path d="M192 176h20l10 12h-30z" fill="#0a0e0a"/>
+    <circle cx="204" cy="214" r="17" fill="#050706"/><circle cx="204" cy="214" r="7" fill="#1a201a"/>
+    <circle cx="306" cy="214" r="17" fill="#050706"/><circle cx="306" cy="214" r="7" fill="#1a201a"/>
+    <circle cx="184" cy="198" r="7" fill="#b0e9c9" opacity=".9"/>
+    <!-- casse d'armi sul cassone -->
+    <g fill="#0d1410" stroke="#00ac47" stroke-opacity=".45" stroke-width="2">
+      <rect x="226" y="120" width="42" height="26"/>
+      <rect x="276" y="126" width="44" height="20"/>
+    </g>
+  </g>
+
+  <!-- camion 2 (dietro, piu' piccolo) -->
+  <g opacity=".85">
+    <path d="M382 208v-46h86v46z" fill="url(#con-cassa)"/>
+    <path d="M382 162h86v6h-86z" fill="#00ac47" opacity=".45"/>
+    <path d="M364 208v-30h22l10 12v18z" fill="#1d241c"/>
+    <circle cx="378" cy="210" r="12" fill="#050706"/>
+    <circle cx="452" cy="210" r="12" fill="#050706"/>
+    <circle cx="362" cy="198" r="5" fill="#b0e9c9" opacity=".8"/>
+  </g>
+
+  <rect y="180" width="600" height="100" fill="url(#con-basso)"/>
+</svg>

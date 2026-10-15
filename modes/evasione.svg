@@ -1,0 +1,73 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 280" width="600" height="280">
+  <!-- Evasione dal carcere: torretta col faro, filo spinato, buco nella rete -->
+  <defs>
+    <linearGradient id="eva-cielo" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#101a24"/>
+      <stop offset="1" stop-color="#050708"/>
+    </linearGradient>
+    <linearGradient id="eva-faro" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#eaffd0" stop-opacity=".5"/>
+      <stop offset="1" stop-color="#eaffd0" stop-opacity="0"/>
+    </linearGradient>
+    <radialGradient id="eva-alone" cx="0.5" cy="0.5" r="0.5">
+      <stop offset="0" stop-color="#fff8d8" stop-opacity=".9"/>
+      <stop offset="1" stop-color="#fff8d8" stop-opacity="0"/>
+    </radialGradient>
+    <linearGradient id="eva-basso" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#000" stop-opacity="0"/>
+      <stop offset="1" stop-color="#000" stop-opacity=".85"/>
+    </linearGradient>
+  </defs>
+
+  <rect width="600" height="280" fill="url(#eva-cielo)"/>
+
+  <!-- luna -->
+  <circle cx="122" cy="52" r="18" fill="#cfe6d8" opacity=".22"/>
+
+  <!-- muro di cinta -->
+  <rect x="0" y="150" width="600" height="60" fill="#0b0f11"/>
+  <g stroke="#1a2226" stroke-width="2">
+    <path d="M0 170h600M0 190h600"/>
+    <path d="M50 150v60M120 150v60M190 150v60M260 150v60M330 150v60M400 150v60M470 150v60M540 150v60"/>
+  </g>
+
+  <!-- filo spinato sopra il muro -->
+  <g stroke="#3a4a50" stroke-width="2" fill="none">
+    <path d="M0 146c14-16 28-16 42 0s28 16 42 0 28-16 42 0 28 16 42 0 28-16 42 0 28 16 42 0 28-16 42 0 28 16 42 0 28-16 42 0 28 16 42 0 28-16 42 0 28 16 42 0"/>
+  </g>
+
+  <!-- torretta di guardia -->
+  <g fill="#0a1013">
+    <path d="M462 150V86h56v64z"/>
+    <path d="M452 66h76v22h-76z"/>
+    <path d="M470 44h40v22h-40z"/>
+  </g>
+  <path d="M452 66h76v22h-76z" fill="none" stroke="#00ac47" stroke-opacity=".45" stroke-width="2"/>
+
+  <!-- faro che spazza il cortile -->
+  <circle cx="466" cy="76" r="9" fill="url(#eva-alone)"/>
+  <path d="M466 76 L150 214 L318 232 Z" fill="url(#eva-faro)"/>
+
+  <!-- rete alta col buco -->
+  <g stroke="#25333a" stroke-width="2">
+    <path d="M28 210v-96M92 210v-96M156 210v-96M220 210v-96"/>
+    <path d="M20 122h214M20 148h214M20 174h214M20 200h214"/>
+  </g>
+  <path d="M96 210v-52l30-14 26 22v44z" fill="#050708"/>
+  <path d="M96 158l30-14 26 22" fill="none" stroke="#00ac47" stroke-width="3"/>
+
+  <!-- terra -->
+  <rect y="210" width="600" height="70" fill="#070a0b"/>
+  <rect y="210" width="600" height="3" fill="#00ac47" opacity=".35"/>
+
+  <!-- due sagome che scappano dal buco -->
+  <g fill="#000">
+    <circle cx="176" cy="176" r="9"/>
+    <path d="M166 188h20l8 24h-36z"/>
+    <path d="M186 196l22 8-4 8-21-8z"/>
+    <circle cx="212" cy="184" r="8"/>
+    <path d="M203 194h18l7 20h-32z"/>
+  </g>
+
+  <rect y="180" width="600" height="100" fill="url(#eva-basso)"/>
+</svg>

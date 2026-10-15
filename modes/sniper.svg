@@ -1,0 +1,44 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 900" width="1600" height="900">
+  <!-- FFA Cecchini: ottica del fucile con tacche di alzo. -->
+  <defs>
+    <radialGradient id="snFondo" cx="62%" cy="40%" r="78%">
+      <stop offset="0%" stop-color="#101c26"/>
+      <stop offset="60%" stop-color="#0a0f14"/>
+      <stop offset="100%" stop-color="#040608"/>
+    </radialGradient>
+    <filter id="snGlow" x="-30%" y="-30%" width="160%" height="160%">
+      <feGaussianBlur stdDeviation="10" result="b"/>
+      <feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+    <radialGradient id="snVign" cx="50%" cy="45%" r="68%">
+      <stop offset="55%" stop-color="#000" stop-opacity="0"/>
+      <stop offset="100%" stop-color="#000" stop-opacity=".7"/>
+    </radialGradient>
+  </defs>
+
+  <rect width="1600" height="900" fill="url(#snFondo)"/>
+
+  <g stroke="#FFC933" stroke-opacity=".08" stroke-width="2">
+    <path d="M0 180 H1600M0 340 H1600M0 500 H1600M0 660 H1600"/>
+  </g>
+
+  <g transform="translate(880 430)" filter="url(#snGlow)">
+    <circle r="300" fill="none" stroke="#EFB500" stroke-opacity=".35" stroke-width="6"/>
+    <circle r="252" fill="#0d1f17" fill-opacity=".35" stroke="#FFC933" stroke-opacity=".9" stroke-width="9"/>
+    <g stroke="#eafff2" stroke-width="6" stroke-linecap="round">
+      <path d="M-252 0 H-70"/><path d="M252 0 H70"/>
+      <path d="M0 -252 V-70"/><path d="M0 252 V70"/>
+    </g>
+    <g stroke="#eafff2" stroke-opacity=".8" stroke-width="5" stroke-linecap="round">
+      <path d="M-34 60 H34"/><path d="M-24 108 H24"/><path d="M-16 156 H16"/>
+      <path d="M-34 -60 H34"/><path d="M-24 -108 H24"/><path d="M-16 -156 H16"/>
+    </g>
+    <circle r="9" fill="#ff5b6e"/>
+  </g>
+
+  <g transform="translate(210 640)" stroke="#FFC933" stroke-opacity=".5" stroke-width="8" stroke-linecap="round" fill="none">
+    <path d="M0 0 H300"/><path d="M0 46 H210"/><path d="M0 92 H120"/>
+  </g>
+
+  <rect width="1600" height="900" fill="url(#snVign)"/>
+</svg>

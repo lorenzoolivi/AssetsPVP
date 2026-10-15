@@ -1,0 +1,45 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 900" width="1600" height="900">
+  <!-- FFA - tutti contro tutti: mirini che convergono al centro. -->
+  <defs>
+    <radialGradient id="ffaFondo" cx="50%" cy="42%" r="72%">
+      <stop offset="0%" stop-color="#123322"/>
+      <stop offset="55%" stop-color="#0c1218"/>
+      <stop offset="100%" stop-color="#05070a"/>
+    </radialGradient>
+    <linearGradient id="ffaRaggio" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#EFB500" stop-opacity="0"/>
+      <stop offset="100%" stop-color="#FFC933" stop-opacity=".85"/>
+    </linearGradient>
+    <filter id="ffaGlow" x="-30%" y="-30%" width="160%" height="160%">
+      <feGaussianBlur stdDeviation="14" result="b"/>
+      <feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+    <radialGradient id="ffaVign" cx="50%" cy="45%" r="70%">
+      <stop offset="60%" stop-color="#000" stop-opacity="0"/>
+      <stop offset="100%" stop-color="#000" stop-opacity=".65"/>
+    </radialGradient>
+  </defs>
+
+  <rect width="1600" height="900" fill="url(#ffaFondo)"/>
+
+  <g stroke="#ffffff" stroke-opacity=".04" stroke-width="2">
+    <path d="M-200 900 L500 0M0 900 L700 0M200 900 L900 0M400 900 L1100 0M600 900 L1300 0M800 900 L1500 0M1000 900 L1700 0M1200 900 L1900 0"/>
+  </g>
+
+  <g transform="translate(800 430)" filter="url(#ffaGlow)">
+    <g stroke="url(#ffaRaggio)" stroke-width="10" stroke-linecap="round" fill="none">
+      <path d="M-520 0 H-180"/><path d="M520 0 H180"/>
+      <path d="M0 -330 V-150"/><path d="M0 330 V150"/>
+      <path d="M-390 -240 L-160 -100"/><path d="M390 240 L160 100"/>
+      <path d="M-390 240 L-160 100"/><path d="M390 -240 L160 -100"/>
+    </g>
+    <circle r="132" fill="none" stroke="#FFC933" stroke-width="8" stroke-opacity=".95"/>
+    <circle r="196" fill="none" stroke="#EFB500" stroke-width="4" stroke-opacity=".45" stroke-dasharray="26 22"/>
+    <circle r="26" fill="#FFC933"/>
+    <g stroke="#eafff2" stroke-width="7" stroke-linecap="round">
+      <path d="M0 -104 V-58"/><path d="M0 104 V58"/><path d="M-104 0 H-58"/><path d="M104 0 H58"/>
+    </g>
+  </g>
+
+  <rect width="1600" height="900" fill="url(#ffaVign)"/>
+</svg>

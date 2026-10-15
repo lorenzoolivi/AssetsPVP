@@ -1,0 +1,133 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 900" width="1600" height="900">
+  <!-- Invasione: il territorio da conquistare, la bandiera che sale e chi
+       arriva da fuori per prenderselo. Stesso trattamento delle altre foto dei
+       minigiochi (v. royale.svg): 1600x900, fondo scuro in radiale, accenti
+       verdi #FFC933, nebbia in basso e vignettatura sopra tutto. -->
+  <defs>
+    <radialGradient id="invFondo" cx="50%" cy="38%" r="80%">
+      <stop offset="0%" stop-color="#16202a"/>
+      <stop offset="60%" stop-color="#0a0d12"/>
+      <stop offset="100%" stop-color="#04060a"/>
+    </radialGradient>
+    <linearGradient id="invNebbia" x1="0" y1="1" x2="0" y2="0">
+      <stop offset="0%" stop-color="#0a0d12"/>
+      <stop offset="100%" stop-color="#0a0d12" stop-opacity="0"/>
+    </linearGradient>
+    <filter id="invGlow" x="-40%" y="-40%" width="180%" height="180%">
+      <feGaussianBlur stdDeviation="14" result="b"/>
+      <feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+    <radialGradient id="invZona" cx="50%" cy="50%" r="50%">
+      <stop offset="45%" stop-color="#FFC933" stop-opacity=".16"/>
+      <stop offset="100%" stop-color="#FFC933" stop-opacity="0"/>
+    </radialGradient>
+    <radialGradient id="invVign" cx="50%" cy="45%" r="68%">
+      <stop offset="52%" stop-color="#000" stop-opacity="0"/>
+      <stop offset="100%" stop-color="#000" stop-opacity=".75"/>
+    </radialGradient>
+  </defs>
+
+  <rect width="1600" height="900" fill="url(#invFondo)"/>
+
+  <!-- il territorio: piazzola in prospettiva, bordo tratteggiato = zona
+       contesa, non ancora presa -->
+  <g transform="translate(800 610)">
+    <ellipse rx="470" ry="230" fill="url(#invZona)"/>
+    <path d="M0 -190 L480 0 L0 190 L-480 0z" fill="#080b10" opacity=".75"/>
+    <path d="M0 -190 L480 0 L0 190 L-480 0z" fill="none" stroke="#FFC933"
+          stroke-width="5" stroke-dasharray="30 22" opacity=".45"/>
+    <path d="M0 -120 L304 0 L0 120 L-304 0z" fill="none" stroke="#FFC933"
+          stroke-width="3" opacity=".18"/>
+  </g>
+
+  <!-- chi arriva da fuori: frecce che puntano tutte al centro, con la scia
+       da dove sono partite -->
+  <g fill="#FFC933">
+    <g opacity=".5">
+      <path d="M300 610 l-90 -46 v92z"/>
+      <path d="M60 610 h150" stroke="#FFC933" stroke-width="6"
+            stroke-dasharray="20 18" fill="none" opacity=".55"/>
+    </g>
+    <g opacity=".5">
+      <path d="M1300 610 l90 -46 v92z"/>
+      <path d="M1540 610 h-150" stroke="#FFC933" stroke-width="6"
+            stroke-dasharray="20 18" fill="none" opacity=".55"/>
+    </g>
+    <g opacity=".38">
+      <path d="M520 830 l-40 -92 l96 34z"/>
+    </g>
+    <g opacity=".38">
+      <path d="M1080 830 l40 -92 l-96 34z"/>
+    </g>
+  </g>
+
+  <!-- il posto da tenere: palazzina con l'asta in cima -->
+  <g transform="translate(800 610)">
+    <g fill="#050709" stroke="#FFC933" stroke-width="6" stroke-linejoin="round">
+      <path d="M-150 0 L-150 -250 L0 -320 L150 -250 L150 0z"/>
+      <path d="M-150 -250 L0 -320 L150 -250" fill="#0b1016"/>
+    </g>
+    <!-- finestre accese: dentro c'e' ancora qualcuno -->
+    <g fill="#FFC933" opacity=".55">
+      <rect x="-104" y="-196" width="56" height="52" rx="6"/>
+      <rect x="-28" y="-196" width="56" height="52" rx="6"/>
+      <rect x="48" y="-196" width="56" height="52" rx="6"/>
+      <rect x="-104" y="-116" width="56" height="52" rx="6" opacity=".45"/>
+      <rect x="48" y="-116" width="56" height="52" rx="6" opacity=".45"/>
+    </g>
+    <!-- porta -->
+    <path d="M-34 0 v-84 h68 v84z" fill="#0b1016" stroke="#FFC933" stroke-width="5"/>
+  </g>
+
+  <!-- la bandiera che sale sul tetto: e' il momento della conquista -->
+  <g transform="translate(800 290)" filter="url(#invGlow)">
+    <rect x="-6" y="-190" width="12" height="190" rx="6" fill="#eafff2"/>
+    <path d="M6 -184 L232 -140 L6 -96z" fill="#FFC933"/>
+    <path d="M6 -184 L232 -140 L6 -96z" fill="none" stroke="#eafff2" stroke-width="4"/>
+  </g>
+
+  <!-- avanzamento della conquista attorno al tetto: arco pieno + pista spenta -->
+  <g transform="translate(800 290)" fill="none" stroke-linecap="round">
+    <path d="M-186 0 a186 186 0 0 1 372 0" stroke="#FFC933"
+          stroke-width="10" opacity=".14"/>
+    <path d="M-186 0 a186 186 0 0 1 226 -178" stroke="#FFC933"
+          stroke-width="10" filter="url(#invGlow)"/>
+  </g>
+
+  <!-- chi sta salendo: due sagome in primo piano, fucile in mano -->
+  <g filter="url(#invGlow)">
+    <g transform="translate(430 700)">
+      <g fill="#050709" stroke="#FFC933" stroke-width="6">
+        <circle cy="-96" r="54"/>
+        <path d="M-82 0 q82 -46 164 0 v230 h-164z"/>
+      </g>
+      <g transform="translate(70 84) rotate(-18)" fill="#eafff2">
+        <rect x="-10" y="-8" width="176" height="18" rx="5"/>
+        <rect x="110" y="6" width="26" height="42" rx="6" fill="#FFC933"/>
+      </g>
+    </g>
+    <g transform="translate(1190 740) scale(-.92 .92)">
+      <g fill="#050709" stroke="#FFC933" stroke-width="6">
+        <circle cy="-96" r="54"/>
+        <path d="M-82 0 q82 -46 164 0 v230 h-164z"/>
+      </g>
+      <g transform="translate(70 84) rotate(-18)" fill="#eafff2">
+        <rect x="-10" y="-8" width="176" height="18" rx="5"/>
+        <rect x="110" y="6" width="26" height="42" rx="6" fill="#FFC933"/>
+      </g>
+    </g>
+  </g>
+
+  <!-- chi ci ha gia' rimesso, ai lati -->
+  <g fill="#0f151d" opacity=".85">
+    <g transform="translate(240 800) rotate(-88)">
+      <circle cy="-66" r="42"/><path d="M-60 0 q60 -34 120 0 v180 h-120z"/>
+    </g>
+    <g transform="translate(1400 828) rotate(86)" opacity=".7">
+      <circle cy="-60" r="38"/><path d="M-56 0 q56 -32 112 0 v168 h-112z"/>
+    </g>
+  </g>
+
+  <rect y="560" width="1600" height="340" fill="url(#invNebbia)"/>
+  <rect width="1600" height="900" fill="url(#invVign)"/>
+</svg>

@@ -1,0 +1,74 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 280" width="600" height="280">
+  <!-- Carico al confine: casse lasciate su una pista oltre Paleto, montagne, alba fredda -->
+  <defs>
+    <linearGradient id="cnf-cielo" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#13202a"/>
+      <stop offset=".7" stop-color="#0a1013"/>
+      <stop offset="1" stop-color="#050708"/>
+    </linearGradient>
+    <linearGradient id="cnf-cassa" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#3b3324"/>
+      <stop offset="1" stop-color="#191509"/>
+    </linearGradient>
+    <radialGradient id="cnf-alone" cx="0.5" cy="0.5" r="0.5">
+      <stop offset="0" stop-color="#00ac47" stop-opacity=".45"/>
+      <stop offset="1" stop-color="#00ac47" stop-opacity="0"/>
+    </radialGradient>
+    <linearGradient id="cnf-basso" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#000" stop-opacity="0"/>
+      <stop offset="1" stop-color="#000" stop-opacity=".85"/>
+    </linearGradient>
+  </defs>
+
+  <rect width="600" height="280" fill="url(#cnf-cielo)"/>
+
+  <!-- montagne di Paleto, tre strati -->
+  <path d="M0 148 L86 66 L150 118 L216 54 L300 132 L372 78 L452 136 L520 92 L600 140 L600 220 L0 220 Z" fill="#0b141a"/>
+  <path d="M0 168 L74 122 L138 160 L214 116 L292 166 L370 128 L448 170 L528 136 L600 172 L600 224 L0 224 Z" fill="#080f13"/>
+  <path d="M0 190 L120 164 L240 192 L360 162 L470 194 L600 168 L600 226 L0 226 Z" fill="#060b0e"/>
+
+  <!-- neve sulle cime -->
+  <g fill="#9fc4b6" opacity=".18">
+    <path d="M216 54 L200 76 L232 76 Z"/>
+    <path d="M86 66 L72 88 L102 88 Z"/>
+    <path d="M520 92 L508 110 L534 110 Z"/>
+  </g>
+
+  <!-- pini -->
+  <g fill="#050a07">
+    <path d="M42 214l16-42 16 42z"/><rect x="55" y="212" width="6" height="12"/>
+    <path d="M78 216l12-32 12 32z"/><rect x="87" y="214" width="5" height="10"/>
+    <path d="M530 212l14-38 14 38z"/><rect x="541" y="210" width="6" height="12"/>
+    <path d="M566 216l11-30 11 30z"/><rect x="574" y="214" width="5" height="10"/>
+  </g>
+
+  <!-- pista sterrata -->
+  <rect y="222" width="600" height="58" fill="#0a0a09"/>
+  <g stroke="#3a3427" stroke-opacity=".5" stroke-width="3" fill="none">
+    <path d="M0 244c120-10 240 6 380-6 90-8 160 2 220-4"/>
+    <path d="M0 264c140-8 250 8 380-4 90-8 160 4 220-2"/>
+  </g>
+  <rect y="222" width="600" height="2" fill="#00ac47" opacity=".3"/>
+
+  <!-- il carico abbandonato -->
+  <circle cx="316" cy="212" r="96" fill="url(#cnf-alone)"/>
+  <g>
+    <rect x="256" y="176" width="72" height="46" fill="url(#cnf-cassa)" stroke="#00ac47" stroke-opacity=".55" stroke-width="2"/>
+    <path d="M256 196h72M292 176v46" stroke="#00ac47" stroke-opacity=".4" stroke-width="2"/>
+    <rect x="332" y="192" width="54" height="30" fill="url(#cnf-cassa)" stroke="#00ac47" stroke-opacity=".4" stroke-width="2"/>
+    <path d="M332 207h54" stroke="#00ac47" stroke-opacity=".3" stroke-width="2"/>
+    <rect x="286" y="150" width="40" height="26" fill="#20200f" stroke="#00ac47" stroke-opacity=".35" stroke-width="2"/>
+  </g>
+
+  <!-- telo che svolazza -->
+  <path d="M240 176c26-14 60-18 96-10-30 12-64 14-96 10z" fill="#101a14" opacity=".9"/>
+
+  <!-- cartello del confine -->
+  <g>
+    <rect x="450" y="150" width="6" height="72" fill="#141410"/>
+    <rect x="420" y="140" width="70" height="28" fill="#0d1410" stroke="#00ac47" stroke-opacity=".6" stroke-width="2"/>
+    <path d="M430 154h50" stroke="#00ac47" stroke-opacity=".55" stroke-width="4"/>
+  </g>
+
+  <rect y="180" width="600" height="100" fill="url(#cnf-basso)"/>
+</svg>

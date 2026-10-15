@@ -1,0 +1,109 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 900" width="1600" height="900">
+  <!-- Battle Royale: l'aereo che passa, i paracadute che scendono e la zona
+       che si stringe. Stesso trattamento delle altre foto dei minigiochi:
+       1600x900, fondo scuro in radiale, accenti verdi #FFC933, nebbia in
+       basso e vignettatura sopra tutto. -->
+  <defs>
+    <radialGradient id="brFondo" cx="50%" cy="38%" r="80%">
+      <stop offset="0%" stop-color="#16202a"/>
+      <stop offset="60%" stop-color="#0a0d12"/>
+      <stop offset="100%" stop-color="#04060a"/>
+    </radialGradient>
+    <linearGradient id="brNebbia" x1="0" y1="1" x2="0" y2="0">
+      <stop offset="0%" stop-color="#0a0d12"/>
+      <stop offset="100%" stop-color="#0a0d12" stop-opacity="0"/>
+    </linearGradient>
+    <filter id="brGlow" x="-40%" y="-40%" width="180%" height="180%">
+      <feGaussianBlur stdDeviation="14" result="b"/>
+      <feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+    <radialGradient id="brZona" cx="50%" cy="50%" r="50%">
+      <stop offset="70%" stop-color="#FFC933" stop-opacity="0"/>
+      <stop offset="100%" stop-color="#FFC933" stop-opacity=".22"/>
+    </radialGradient>
+    <radialGradient id="brVign" cx="50%" cy="45%" r="68%">
+      <stop offset="52%" stop-color="#000" stop-opacity="0"/>
+      <stop offset="100%" stop-color="#000" stop-opacity=".75"/>
+    </radialGradient>
+  </defs>
+
+  <rect width="1600" height="900" fill="url(#brFondo)"/>
+
+  <!-- la zona: cerchio esterno spento, quello vero acceso e stretto dentro -->
+  <g transform="translate(830 430)">
+    <circle r="360" fill="none" stroke="#FFC933" stroke-width="3" opacity=".12"/>
+    <circle r="360" fill="url(#brZona)" opacity=".5"/>
+    <circle r="250" fill="none" stroke="#FFC933" stroke-width="4"
+            stroke-dasharray="26 20" opacity=".35"/>
+    <g filter="url(#brGlow)">
+      <circle r="150" fill="#FFC933" opacity=".06"/>
+      <circle r="150" fill="none" stroke="#FFC933" stroke-width="7"/>
+    </g>
+    <!-- frecce che indicano il restringimento -->
+    <g fill="#FFC933" opacity=".55">
+      <path d="M0 -232 l22 -44 h-44z"/>
+      <path d="M0 232 l22 44 h-44z"/>
+      <path d="M232 0 l44 22 v-44z"/>
+      <path d="M-232 0 l-44 22 v-44z"/>
+    </g>
+  </g>
+
+  <!-- rotta dell'aereo -->
+  <path d="M60 190 q420 -90 900 30" fill="none" stroke="#FFC933"
+        stroke-width="4" stroke-dasharray="18 24" opacity=".3"/>
+
+  <!-- l'aereo -->
+  <g transform="translate(980 232) rotate(8)" filter="url(#brGlow)">
+    <g fill="#050709" stroke="#FFC933" stroke-width="6" stroke-linejoin="round">
+      <path d="M-150 0 q40 -26 130 -26 h70 l70 26 -70 26 h-70 q-90 0 -130 -26z"/>
+      <path d="M-10 -20 l-70 -78 h44 l96 78z"/>
+      <path d="M-10 20 l-70 78 h44 l96 -78z"/>
+      <path d="M-132 -6 l-46 -40 h26 l52 40z"/>
+    </g>
+  </g>
+
+  <!-- paracadute che scendono -->
+  <g stroke="#FFC933" stroke-width="5" fill="none">
+    <g transform="translate(430 330)" opacity=".9">
+      <path d="M-70 0 a70 62 0 0 1 140 0z" fill="#050709"/>
+      <path d="M-70 0 l40 62 M70 0 l-40 62 M0 0 v62"/>
+      <path d="M-16 62 h32 v40 h-32z" fill="#050709"/>
+    </g>
+    <g transform="translate(270 520) scale(.72)" opacity=".55">
+      <path d="M-70 0 a70 62 0 0 1 140 0z" fill="#050709"/>
+      <path d="M-70 0 l40 62 M70 0 l-40 62 M0 0 v62"/>
+      <path d="M-16 62 h32 v40 h-32z" fill="#050709"/>
+    </g>
+    <g transform="translate(600 610) scale(.5)" opacity=".32">
+      <path d="M-70 0 a70 62 0 0 1 140 0z" fill="#050709"/>
+      <path d="M-70 0 l40 62 M70 0 l-40 62 M0 0 v62"/>
+      <path d="M-16 62 h32 v40 h-32z" fill="#050709"/>
+    </g>
+  </g>
+
+  <!-- l'ultimo rimasto, in piedi al centro della zona -->
+  <g transform="translate(830 560)" filter="url(#brGlow)">
+    <g fill="#050709" stroke="#FFC933" stroke-width="6">
+      <circle cy="-96" r="56"/>
+      <path d="M-84 0 q84 -48 168 0 v250 h-168z"/>
+    </g>
+    <!-- fucile a tracolla -->
+    <g transform="translate(74 96) rotate(-24)" fill="#eafff2">
+      <rect x="-10" y="-8" width="180" height="18" rx="5"/>
+      <rect x="112" y="6" width="26" height="42" rx="6" fill="#FFC933"/>
+    </g>
+  </g>
+
+  <!-- sagome cadute ai lati: il campo si e' gia' svuotato -->
+  <g fill="#0f151d" opacity=".85">
+    <g transform="translate(1330 690) rotate(-90)">
+      <circle cy="-70" r="44"/><path d="M-64 0 q64 -36 128 0 v190 h-128z"/>
+    </g>
+    <g transform="translate(300 760) rotate(84)" opacity=".7">
+      <circle cy="-64" r="40"/><path d="M-58 0 q58 -34 116 0 v176 h-116z"/>
+    </g>
+  </g>
+
+  <rect y="560" width="1600" height="340" fill="url(#brNebbia)"/>
+  <rect width="1600" height="900" fill="url(#brVign)"/>
+</svg>

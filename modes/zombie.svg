@@ -1,0 +1,106 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 900" width="1600" height="900">
+  <defs>
+    <radialGradient id="zFondo" cx="50%" cy="34%" r="82%">
+      <stop offset="0%" stop-color="#16202a"/>
+      <stop offset="58%" stop-color="#0a0d12"/>
+      <stop offset="100%" stop-color="#04060a"/>
+    </radialGradient>
+    <radialGradient id="zLuna" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#dfeee2"/>
+      <stop offset="70%" stop-color="#9fc4a8"/>
+      <stop offset="100%" stop-color="#5d8468"/>
+    </radialGradient>
+    <radialGradient id="zAlone" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#FFC933" stop-opacity="0.36"/>
+      <stop offset="100%" stop-color="#FFC933" stop-opacity="0"/>
+    </radialGradient>
+    <linearGradient id="zNebbia" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#0a1410" stop-opacity="0"/>
+      <stop offset="60%" stop-color="#0c1a14" stop-opacity="0.72"/>
+      <stop offset="100%" stop-color="#050807" stop-opacity="0.96"/>
+    </linearGradient>
+    <linearGradient id="zVigna" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#000" stop-opacity="0.55"/>
+      <stop offset="35%" stop-color="#000" stop-opacity="0"/>
+      <stop offset="100%" stop-color="#000" stop-opacity="0.7"/>
+    </linearGradient>
+    <filter id="zSfoca" x="-30%" y="-30%" width="160%" height="160%">
+      <feGaussianBlur stdDeviation="14"/>
+    </filter>
+    <filter id="zSfocaPoco" x="-30%" y="-30%" width="160%" height="160%">
+      <feGaussianBlur stdDeviation="5"/>
+    </filter>
+  </defs>
+
+  <rect width="1600" height="900" fill="url(#zFondo)"/>
+
+  <circle cx="1180" cy="250" r="330" fill="url(#zAlone)"/>
+  <circle cx="1180" cy="250" r="118" fill="url(#zLuna)"/>
+  <circle cx="1142" cy="220" r="22" fill="#7d9f88" opacity="0.5"/>
+  <circle cx="1216" cy="288" r="15" fill="#7d9f88" opacity="0.42"/>
+  <circle cx="1198" cy="196" r="10" fill="#7d9f88" opacity="0.38"/>
+
+  <g fill="#0d1a14" opacity="0.85" filter="url(#zSfoca)">
+    <path d="M0 690 L120 596 L230 668 L340 560 L470 660 L600 590 L720 672 L860 570 L990 664 L1130 588 L1270 668 L1400 596 L1520 672 L1600 620 L1600 900 L0 900 Z"/>
+  </g>
+
+  <g opacity="0.5" filter="url(#zSfocaPoco)" fill="#060b09">
+    <path d="M250 900 L250 640 q0-40 34-40 q34 0 34 40 l0 60 l40 40 l0 160 Z"/>
+    <path d="M1330 900 L1330 620 q0-42 36-42 q36 0 36 42 l0 66 l-44 44 l0 170 Z"/>
+  </g>
+
+  <g fill="#04070a">
+    <g transform="translate(420 470) scale(1.35)">
+      <circle cx="0" cy="0" r="46"/>
+      <path d="M-52 52 q52 -26 104 0 l16 210 q-72 24 -136 0 Z"/>
+      <path d="M-52 96 L-168 176 l14 34 L-40 146 Z"/>
+      <path d="M52 96 L168 168 l-12 36 L40 148 Z"/>
+      <path d="M-40 262 l-10 130 l34 4 l16 -128 Z"/>
+      <path d="M40 262 l14 132 l-34 4 l-14 -130 Z"/>
+    </g>
+    <g transform="translate(760 520) scale(1.15)">
+      <circle cx="0" cy="0" r="44"/>
+      <path d="M-50 50 q50 -24 100 0 l14 196 q-68 22 -128 0 Z"/>
+      <path d="M-50 92 L-152 40 l-18 30 L-38 140 Z"/>
+      <path d="M50 92 L156 52 l16 32 L38 142 Z"/>
+      <path d="M-38 246 l-12 122 l32 4 l16 -120 Z"/>
+      <path d="M38 246 l16 124 l-32 4 l-16 -122 Z"/>
+    </g>
+    <g transform="translate(1010 560) scale(0.95)">
+      <circle cx="0" cy="0" r="42"/>
+      <path d="M-48 48 q48 -22 96 0 l12 184 q-64 20 -120 0 Z"/>
+      <path d="M-48 88 L-160 150 l12 32 L-36 132 Z"/>
+      <path d="M48 88 L152 42 l16 30 L36 134 Z"/>
+      <path d="M-36 232 l-10 116 l30 4 l14 -114 Z"/>
+      <path d="M36 232 l14 118 l-30 4 l-14 -116 Z"/>
+    </g>
+    <g transform="translate(190 600) scale(0.8)" opacity="0.9">
+      <circle cx="0" cy="0" r="40"/>
+      <path d="M-46 46 q46 -22 92 0 l12 172 q-62 20 -116 0 Z"/>
+      <path d="M-46 84 L-146 132 l12 30 L-34 126 Z"/>
+      <path d="M46 84 L146 128 l-12 32 L34 128 Z"/>
+    </g>
+    <g transform="translate(1290 620) scale(0.72)" opacity="0.85">
+      <circle cx="0" cy="0" r="40"/>
+      <path d="M-46 46 q46 -22 92 0 l12 168 q-62 20 -116 0 Z"/>
+      <path d="M-46 84 L-140 42 l-16 28 L-34 122 Z"/>
+      <path d="M46 84 L142 130 l-14 30 L34 126 Z"/>
+    </g>
+  </g>
+
+  <g fill="#FFC933" opacity="0.92">
+    <circle cx="404" cy="452" r="7"/>
+    <circle cx="440" cy="452" r="7"/>
+    <circle cx="748" cy="508" r="6"/>
+    <circle cx="778" cy="508" r="6"/>
+    <circle cx="1000" cy="548" r="5"/>
+    <circle cx="1026" cy="548" r="5"/>
+    <circle cx="182" cy="588" r="4"/>
+    <circle cx="206" cy="588" r="4"/>
+    <circle cx="1282" cy="608" r="4"/>
+    <circle cx="1304" cy="608" r="4"/>
+  </g>
+
+  <rect y="470" width="1600" height="430" fill="url(#zNebbia)"/>
+  <rect width="1600" height="900" fill="url(#zVigna)"/>
+</svg>

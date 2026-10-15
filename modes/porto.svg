@@ -1,0 +1,78 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 280" width="600" height="280">
+  <!-- Container al porto: gru, pile di container, il container "segnato" in verde -->
+  <defs>
+    <linearGradient id="por-cielo" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#0d1c22"/>
+      <stop offset="1" stop-color="#050809"/>
+    </linearGradient>
+    <linearGradient id="por-acqua" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#0a1d20"/>
+      <stop offset="1" stop-color="#04090a"/>
+    </linearGradient>
+    <radialGradient id="por-faro" cx="0.5" cy="0.5" r="0.5">
+      <stop offset="0" stop-color="#00ac47" stop-opacity=".55"/>
+      <stop offset="1" stop-color="#00ac47" stop-opacity="0"/>
+    </radialGradient>
+    <linearGradient id="por-basso" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#000" stop-opacity="0"/>
+      <stop offset="1" stop-color="#000" stop-opacity=".85"/>
+    </linearGradient>
+  </defs>
+
+  <rect width="600" height="280" fill="url(#por-cielo)"/>
+
+  <!-- acqua -->
+  <rect y="196" width="600" height="84" fill="url(#por-acqua)"/>
+  <g stroke="#2f6f60" stroke-opacity=".35" stroke-width="2">
+    <path d="M20 216h70M120 226h54M210 214h84M330 230h60M420 218h72M510 234h64"/>
+    <path d="M60 246h90M200 252h70M320 246h58M450 254h80"/>
+  </g>
+
+  <!-- molo -->
+  <rect y="188" width="600" height="12" fill="#0c1112"/>
+  <rect y="186" width="600" height="3" fill="#00ac47" opacity=".45"/>
+  <g fill="#080c0d">
+    <rect x="40" y="200" width="10" height="40"/><rect x="180" y="200" width="10" height="40"/>
+    <rect x="330" y="200" width="10" height="40"/><rect x="500" y="200" width="10" height="40"/>
+  </g>
+
+  <!-- gru portuale -->
+  <g fill="#101718">
+    <path d="M400 188V54h14v134z"/>
+    <path d="M470 188V54h14v134z"/>
+    <path d="M372 44h150v14H372z"/>
+    <path d="M522 51h58v8h-58z"/>
+    <path d="M406 58h72v10h-72z"/>
+  </g>
+  <path d="M556 55v52" stroke="#3a4a4c" stroke-width="3"/>
+  <path d="M540 107h34v20h-34z" fill="#0d1314" stroke="#00ac47" stroke-opacity=".5" stroke-width="2"/>
+
+  <!-- pile di container -->
+  <g stroke="#000" stroke-opacity=".5" stroke-width="1">
+    <rect x="26" y="140" width="92" height="24" fill="#17322a"/>
+    <rect x="26" y="164" width="92" height="24" fill="#122a24"/>
+    <rect x="122" y="164" width="86" height="24" fill="#1b2b33"/>
+    <rect x="216" y="152" width="88" height="18" fill="#12262c"/>
+    <rect x="216" y="170" width="88" height="18" fill="#0f2026"/>
+    <rect x="308" y="166" width="76" height="22" fill="#1c2a20"/>
+  </g>
+  <!-- righe verticali dei container -->
+  <g stroke="#000" stroke-opacity=".35" stroke-width="2">
+    <path d="M44 140v48M62 140v48M80 140v48M98 140v48"/>
+    <path d="M140 164v24M158 164v24M176 164v24M194 164v24"/>
+    <path d="M234 152v36M252 152v36M270 152v36M288 152v36"/>
+  </g>
+
+  <!-- IL container sotto la gru: quello dell'evento -->
+  <circle cx="470" cy="164" r="70" fill="url(#por-faro)"/>
+  <g>
+    <rect x="424" y="146" width="92" height="42" fill="#0a1a12" stroke="#00ac47" stroke-width="3"/>
+    <g stroke="#00ac47" stroke-opacity=".6" stroke-width="2">
+      <path d="M444 146v42M464 146v42M484 146v42M504 146v42"/>
+    </g>
+    <path d="M424 146h92v6h-92z" fill="#00ac47" opacity=".6"/>
+  </g>
+  <path d="M470 127v19" stroke="#3a4a4c" stroke-width="3"/>
+
+  <rect y="180" width="600" height="100" fill="url(#por-basso)"/>
+</svg>

@@ -1,0 +1,75 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 900" width="1600" height="900">
+  <!-- Prop Hunt: la cassa travestita che si nasconde fra gli oggetti veri, con
+       il mirino del cacciatore che la sta per trovare. Stesso trattamento delle
+       altre foto dei minigiochi: 1600x900, fondo scuro in radiale, accenti
+       verdi #FFC933, nebbia in basso e vignettatura sopra tutto. -->
+  <defs>
+    <radialGradient id="phFondo" cx="50%" cy="38%" r="80%">
+      <stop offset="0%" stop-color="#16202a"/>
+      <stop offset="60%" stop-color="#0a0d12"/>
+      <stop offset="100%" stop-color="#04060a"/>
+    </radialGradient>
+    <linearGradient id="phNebbia" x1="0" y1="1" x2="0" y2="0">
+      <stop offset="0%" stop-color="#0a0d12"/>
+      <stop offset="100%" stop-color="#0a0d12" stop-opacity="0"/>
+    </linearGradient>
+    <linearGradient id="phCassa" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#2c3a2f"/>
+      <stop offset="100%" stop-color="#151d18"/>
+    </linearGradient>
+    <linearGradient id="phCassaViva" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#33543f"/>
+      <stop offset="100%" stop-color="#16261c"/>
+    </linearGradient>
+    <filter id="phGlow" x="-40%" y="-40%" width="180%" height="180%">
+      <feGaussianBlur stdDeviation="14" result="sfocato"/>
+      <feMerge>
+        <feMergeNode in="sfocato"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+    <radialGradient id="phVignetta" cx="50%" cy="45%" r="72%">
+      <stop offset="55%" stop-color="#000" stop-opacity="0"/>
+      <stop offset="100%" stop-color="#000" stop-opacity="0.72"/>
+    </radialGradient>
+  </defs>
+
+  <rect width="1600" height="900" fill="url(#phFondo)"/>
+
+  <!-- pavimento -->
+  <g opacity="0.22" stroke="#FFC933" stroke-width="2">
+    <path d="M0 700 H1600"/>
+    <path d="M180 700 L60 900"/>
+    <path d="M520 700 L470 900"/>
+    <path d="M1080 700 L1130 900"/>
+    <path d="M1420 700 L1540 900"/>
+  </g>
+
+  <!-- casse vere, quelle che non si muovono -->
+  <g>
+    <rect x="250" y="470" width="230" height="230" rx="10" fill="url(#phCassa)" stroke="#0a0d12" stroke-width="6"/>
+    <path d="M250 545 H480 M250 625 H480 M365 470 V700" stroke="#0a0d12" stroke-width="6" opacity="0.55"/>
+
+    <rect x="1120" y="500" width="200" height="200" rx="10" fill="url(#phCassa)" stroke="#0a0d12" stroke-width="6"/>
+    <path d="M1120 566 H1320 M1120 634 H1320 M1220 500 V700" stroke="#0a0d12" stroke-width="6" opacity="0.55"/>
+
+    <rect x="560" y="580" width="130" height="120" rx="8" fill="url(#phCassa)" stroke="#0a0d12" stroke-width="5"/>
+  </g>
+
+  <!-- la cassa travestita: e' un giocatore, ha il bordo verde e due occhi -->
+  <g filter="url(#phGlow)">
+    <rect x="760" y="430" width="280" height="270" rx="12" fill="url(#phCassaViva)" stroke="#FFC933" stroke-width="7"/>
+    <path d="M760 520 H1040 M760 610 H1040 M900 430 V700" stroke="#FFC933" stroke-width="5" opacity="0.35"/>
+    <circle cx="855" cy="560" r="16" fill="#FFC933" opacity="0.9"/>
+    <circle cx="945" cy="560" r="16" fill="#FFC933" opacity="0.9"/>
+  </g>
+
+  <!-- mirino del cacciatore -->
+  <g stroke="#FFC933" stroke-width="6" fill="none" opacity="0.95">
+    <circle cx="900" cy="560" r="190" stroke-dasharray="52 34" opacity="0.55"/>
+    <path d="M900 320 V400 M900 720 V800 M660 560 H740 M1060 560 H1140"/>
+  </g>
+
+  <rect y="620" width="1600" height="280" fill="url(#phNebbia)"/>
+  <rect width="1600" height="900" fill="url(#phVignetta)"/>
+</svg>

@@ -1,0 +1,73 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 280" width="600" height="280">
+  <!-- Recupero ostaggio: capannone a La Mesa, lampada sul sequestrato, poliziotti alla porta -->
+  <defs>
+    <linearGradient id="ost-fondo" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#12241b"/>
+      <stop offset="1" stop-color="#050807"/>
+    </linearGradient>
+    <radialGradient id="ost-lampada" cx="0.5" cy="0" r="1">
+      <stop offset="0" stop-color="#9adcb8" stop-opacity=".55"/>
+      <stop offset="1" stop-color="#9adcb8" stop-opacity="0"/>
+    </radialGradient>
+    <linearGradient id="ost-porta" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#00ac47" stop-opacity=".85"/>
+      <stop offset="1" stop-color="#00ac47" stop-opacity=".15"/>
+    </linearGradient>
+    <linearGradient id="ost-basso" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#000" stop-opacity="0"/>
+      <stop offset="1" stop-color="#000" stop-opacity=".85"/>
+    </linearGradient>
+  </defs>
+
+  <rect width="600" height="280" fill="url(#ost-fondo)"/>
+
+  <!-- lamiera di fondo del capannone -->
+  <g opacity=".14" stroke="#8fd6ae" stroke-width="2">
+    <path d="M0 40h600M0 78h600M0 116h600M0 154h600"/>
+    <path d="M60 30v140M150 30v140M240 30v140M360 30v140M450 30v140M540 30v140"/>
+  </g>
+
+  <!-- porta aperta sul retro, luce verde -->
+  <path d="M410 60h86v130h-86z" fill="url(#ost-porta)" opacity=".55"/>
+  <path d="M410 60h86v130h-86z" fill="none" stroke="#00ac47" stroke-opacity=".6" stroke-width="2"/>
+
+  <!-- cono della lampada sull'ostaggio -->
+  <path d="M196 22 L120 210 L272 210 Z" fill="url(#ost-lampada)"/>
+  <circle cx="196" cy="24" r="7" fill="#9adcb8" opacity=".9"/>
+  <path d="M196 0v18" stroke="#9adcb8" stroke-opacity=".5" stroke-width="2"/>
+
+  <!-- pavimento -->
+  <rect y="196" width="600" height="84" fill="#040705"/>
+  <rect y="196" width="600" height="3" fill="#00ac47" opacity=".35"/>
+
+  <!-- sedia + ostaggio legato -->
+  <g fill="#000" opacity=".92">
+    <path d="M182 196v-34h30v34h-6v-26h-18v26z"/>
+    <path d="M180 162h34v6h-34z"/>
+    <circle cx="197" cy="124" r="13"/>
+    <path d="M186 138h22l6 28h-34z"/>
+  </g>
+  <path d="M186 150h22" stroke="#00ac47" stroke-width="3" stroke-opacity=".8"/>
+
+  <!-- casse a terra -->
+  <g fill="#000" opacity=".85">
+    <path d="M60 196v-40h54v40z"/>
+    <path d="M118 196v-26h38v26z"/>
+    <path d="M300 196v-30h44v30z"/>
+  </g>
+  <g stroke="#00ac47" stroke-opacity=".35" stroke-width="2" fill="none">
+    <path d="M60 176h54M87 156v40"/>
+    <path d="M300 181h44"/>
+  </g>
+
+  <!-- poliziotti in controluce sulla porta -->
+  <g fill="#000" opacity=".95">
+    <path d="M436 190v-52a12 12 0 0 1 24 0v52z"/>
+    <circle cx="448" cy="126" r="11"/>
+    <path d="M458 148l26 10-3 8-25-10z"/>
+    <path d="M472 190v-44a10 10 0 0 1 20 0v44z"/>
+    <circle cx="482" cy="136" r="9"/>
+  </g>
+
+  <rect y="180" width="600" height="100" fill="url(#ost-basso)"/>
+</svg>
